@@ -1,0 +1,748 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.2.1.设置 DRIVER 模式 [0x03] · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="getDriverMode.html" />
+    
+    
+    <link rel="prev" href="../UserModePro.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    1.文档维护说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../ProjectIntro.html">
+            
+                <a href="../../ProjectIntro.html">
+            
+                    
+                    2.项目概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../MeetingMinutes.html">
+            
+                <a href="../../MeetingMinutes.html">
+            
+                    
+                    3.会议记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../device.html">
+            
+                <a href="../../device.html">
+            
+                    
+                    4.设备层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../device/debug.html">
+            
+                <a href="../../device/debug.html">
+            
+                    
+                    4.1.调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../device/USBDongleIntroduce.html">
+            
+                <a href="../../device/USBDongleIntroduce.html">
+            
+                    
+                    4.2.无线 USB 适配器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../device/USBDongle/HW/Introduce.html">
+            
+                <a href="../../device/USBDongle/HW/Introduce.html">
+            
+                    
+                    4.2.1.硬件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../device/USBDongle/SW/Introduce.html">
+            
+                <a href="../../device/USBDongle/SW/Introduce.html">
+            
+                    
+                    4.2.2.软件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../device/USBMCUBoardIntroduce.html">
+            
+                <a href="../../device/USBMCUBoardIntroduce.html">
+            
+                    
+                    4.3.双模游戏鼠标主控
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../device/USBMCUBoard/HW/Introduce.html">
+            
+                <a href="../../device/USBMCUBoard/HW/Introduce.html">
+            
+                    
+                    4.3.1.硬件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../device/USBMCUBoard/SW/Introduce.html">
+            
+                <a href="../../device/USBMCUBoard/SW/Introduce.html">
+            
+                    
+                    4.3.2.软件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../ProtocolIntroduce.html">
+            
+                <a href="../../ProtocolIntroduce.html">
+            
+                    
+                    5.上位机 Protocol
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../TestModePro.html">
+            
+                <a href="../TestModePro.html">
+            
+                    
+                    5.1.工厂测试协议
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../factoryPro/getDeviceMAC.html">
+            
+                <a href="../factoryPro/getDeviceMAC.html">
+            
+                    
+                    5.1.1.获取设备 MAC 地址 [0x01]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../factoryPro/getDeviceVersion.html">
+            
+                <a href="../factoryPro/getDeviceVersion.html">
+            
+                    
+                    5.1.2.获取设备版本号 [0x02]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../factoryPro/setDevicePairingCode.html">
+            
+                <a href="../factoryPro/setDevicePairingCode.html">
+            
+                    
+                    5.1.3.设置设备配对码 [0x03]
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../UserModePro.html">
+            
+                <a href="../UserModePro.html">
+            
+                    
+                    5.2.用户配置协议
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.2.1" data-path="setDriverMode.html">
+            
+                <a href="setDriverMode.html">
+            
+                    
+                    5.2.1.设置 DRIVER 模式 [0x03]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="getDriverMode.html">
+            
+                <a href="getDriverMode.html">
+            
+                    
+                    5.2.2.获取 DRIVER 模式 [0x04]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="setDPICurrentMode.html">
+            
+                <a href="setDPICurrentMode.html">
+            
+                    
+                    5.2.3.设置 DPI 当前档位 [0x05]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="getDPICurrentMode.html">
+            
+                <a href="getDPICurrentMode.html">
+            
+                    
+                    5.2.4.获取 DPI 当前档位 [0x06]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" data-path="setKeyMacro.html">
+            
+                <a href="setKeyMacro.html">
+            
+                    
+                    5.2.5.设置按键宏 [0x09]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.6" data-path="getKeyMacro.html">
+            
+                <a href="getKeyMacro.html">
+            
+                    
+                    5.2.6.获取按键宏 [0x0A]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.7" data-path="setCurrentRGBMode.html">
+            
+                <a href="setCurrentRGBMode.html">
+            
+                    
+                    5.2.7.设置当前灯效 [0x0B]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.8" data-path="getCurrentRGBMode.html">
+            
+                <a href="getCurrentRGBMode.html">
+            
+                    
+                    5.2.8.获取当前灯效 [0x0C]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.9" data-path="getCurrentPower.html">
+            
+                <a href="getCurrentPower.html">
+            
+                    
+                    5.2.9.获取当前电量 [0x0D]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.10" data-path="setEnterBootLoader.html">
+            
+                <a href="setEnterBootLoader.html">
+            
+                    
+                    5.2.10.设置 Device 进入 BootLoader 模式 [0x11]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.11" data-path="notifyUpdataFW.html">
+            
+                <a href="notifyUpdataFW.html">
+            
+                    
+                    5.2.11.通知 BootLoader 设备更新 FW 版本 [0x50]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.12" data-path="postUpdataFWData.html">
+            
+                <a href="postUpdataFWData.html">
+            
+                    
+                    5.2.12.向 BootLoader 设备发送 FW 文档的数据 [0x51]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.13" data-path="setExitBootLoader.html">
+            
+                <a href="setExitBootLoader.html">
+            
+                    
+                    5.2.13.设置 Device 退出 BootLoader 模式 [0x52]
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >5.2.1.设置 DRIVER 模式 [0x03]</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><img src="../../images/wpiLogo.jpg" alt="wpiLogo"></p>
+<h1 id="521&#x8BBE;&#x7F6E;-driver-&#x6A21;&#x5F0F;">5.2.1.&#x8BBE;&#x7F6E; DRIVER &#x6A21;&#x5F0F;</h1>
+<h3 id="set-report-&#x6570;&#x636E;&#x683C;&#x5F0F;">Set Report &#x6570;&#x636E;&#x683C;&#x5F0F;</h3>
+<table>
+    <tr>
+        <th white-space="" :="" nowrap=""> Byte \ Bit</th>
+        <th> 7 </th>
+        <th> 6 </th>
+        <th> 5 </th>
+        <th> 4 </th>
+        <th> 3 </th>
+        <th> 2 </th>
+        <th> 1 </th>
+        <th> 0 </th>
+    </tr>
+    <tr>
+        <th> 0 </th>
+        <th colspan="8" align="left"> [ OUT ] Reprot ID ( Reserved ) </th>
+    </tr>
+    <tr>
+        <th> 1 </th>
+        <th colspan="8" align="left"> [ OUT ] CMD Status = 0x00</th>
+    </tr>
+    <tr>
+        <th> 2 </th>
+        <th colspan="8" align="left"> [ OUT ] CMD ID = 0x03 </th>
+    </tr>
+    <tr>
+        <th> 3 </th>
+        <th colspan="8" align="left"> [ OUT ] Data_Index ( LSB ) = 0x00 </th>
+    </tr>
+    <tr>
+        <th> 4 </th>
+        <th colspan="8" align="left"> [ OUT ] Data_Index ( MSB ) = 0x00 </th>
+    </tr>
+    <tr>
+        <th> 5 </th>
+        <th colspan="8" align="left"> [ OUT ] Data_Length = 1 </th>
+    </tr>
+    <tr>
+        <th> 6 </th>
+        <th colspan="8" align="left"> [ OUT ] DriverMode = ( 0x00,0x01 ) </th>
+    </tr>
+    <tr>
+        <th> ...... </th>
+        <th colspan="8" align="left"> [ OUT ] Data = 0x00 </th>
+    </tr>
+    <tr>
+        <th> 63 </th>
+        <th colspan="8" align="left"> [ OUT ] CheckSum: CheckSum = 55h - ( Byte0 + ... + Byte62 ) &amp; 0xFF</th>
+    </tr>
+</table>
+
+<p><strong>DriverMode = 0x01 &#xFF08; &#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x5904;&#x4E8E;&#x6FC0;&#x6D3B;&#x72B6;&#x6001; &#xFF09;</strong><br>
+<strong>DriverMode = 0x00 &#xFF08; &#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x5904;&#x4E8E;&#x975E;&#x6FC0;&#x6D3B;&#x72B6;&#x6001; &#xFF09;</strong><br>
+<strong>&#x6CE8;&#xFF1A;</strong><br>
+<strong>1. DRIVER MODE &#x65F6;&#xFF0C;Mouse &amp; KeyBoard &#x624D;&#x80FD;&#x4FEE;&#x6539;&#x5BA2;&#x5236;&#x5316;&#x529F;&#x80FD;&#xFF0C;&#x4EE5;&#x53CA;&#x6FC0;&#x6D3B;&#x9AD8;&#x7EA7;&#x9AD8;&#x80FD;&#xFF0C;&#x975E; DRIVER MODE &#x65F6;&#xFF0C;&#x8BBE;&#x5907;&#x4E0D;&#x63A5;&#x53D7;&#x5BA2;&#x5236;&#x5316;&#x547D;&#x4EE4;( 0x03&#xFF0C;0x04 &#x9664;&#x5916; )&#xFF0C;&#x8BBE;&#x5907;&#x8F6C;&#x53D8;&#x6210;&#x666E;&#x901A;&#x7684; Mouse &amp; KeyBoard</strong></p>
+<h3 id="get-report-&#x6570;&#x636E;&#x683C;&#x5F0F;">Get Report &#x6570;&#x636E;&#x683C;&#x5F0F;</h3>
+<table>
+    <tr>
+        <th white-space="" :="" nowrap=""> Byte \ Bit</th>
+        <th> 7 </th>
+        <th> 6 </th>
+        <th> 5 </th>
+        <th> 4 </th>
+        <th> 3 </th>
+        <th> 2 </th>
+        <th> 1 </th>
+        <th> 0 </th>
+    </tr>
+    <tr>
+        <th> 0 </th>
+        <th colspan="8" align="left"> [ IN ] Reprot ID ( Reserved )</th>
+    </tr>
+    <tr>
+        <th> 1 </th>
+        <th colspan="8" align="left" white-space="" :="" nowrap=""> [ IN ] CMD Status = 0x00 ( Sucess ) ; 0x01 ( Busy ) ; 0x02 ( Fail ) ; 0x03 ( Not Support )</th>
+    </tr>
+    <tr>
+        <th> 2 </th>
+        <th colspan="8" align="left"> [ IN ] CMD ID = 0x03 </th>
+    </tr>
+    <tr>
+        <th> 3 </th>
+        <th colspan="8" align="left"> [ IN ] Data_Index ( LSB ) = 0x00</th>
+    </tr>
+    <tr>
+        <th> 4 </th>
+        <th colspan="8" align="left"> [ IN ] Data_Index ( MSB ) = 0x00</th>
+    </tr>
+    <tr>
+        <th> 5 </th>
+        <th colspan="8" align="left"> [ IN ] Data_Length = 0 </th>
+    </tr>
+    <tr>
+        <th> ...... </th>
+        <th colspan="8" align="left"> [ IN ] Data = 0x00 </th>
+    </tr>
+    <tr>
+        <th> 63 </th>
+        <th colspan="8" align="left"> [ IN ] CheckSum: CheckSum = 55h - ( Byte0 + ... + Byte62 ) &amp; 0xFF</th>
+    </tr>
+</table>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../UserModePro.html" class="navigation navigation-prev " aria-label="Previous page: 5.2.用户配置协议">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="getDriverMode.html" class="navigation navigation-next " aria-label="Next page: 5.2.2.获取 DRIVER 模式 [0x04]">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.2.1.设置 DRIVER 模式 [0x03]","level":"1.5.2.1","depth":3,"next":{"title":"5.2.2.获取 DRIVER 模式 [0x04]","level":"1.5.2.2","depth":3,"path":"Protocol/userPro/getDriverMode.md","ref":"Protocol/userPro/getDriverMode.md","articles":[]},"previous":{"title":"5.2.用户配置协议","level":"1.5.2","depth":2,"path":"Protocol/UserModePro.md","ref":"Protocol/UserModePro.md","articles":[{"title":"5.2.1.设置 DRIVER 模式 [0x03]","level":"1.5.2.1","depth":3,"path":"Protocol/userPro/setDriverMode.md","ref":"Protocol/userPro/setDriverMode.md","articles":[]},{"title":"5.2.2.获取 DRIVER 模式 [0x04]","level":"1.5.2.2","depth":3,"path":"Protocol/userPro/getDriverMode.md","ref":"Protocol/userPro/getDriverMode.md","articles":[]},{"title":"5.2.3.设置 DPI 当前档位 [0x05]","level":"1.5.2.3","depth":3,"path":"Protocol/userPro/setDPICurrentMode.md","ref":"Protocol/userPro/setDPICurrentMode.md","articles":[]},{"title":"5.2.4.获取 DPI 当前档位 [0x06]","level":"1.5.2.4","depth":3,"path":"Protocol/userPro/getDPICurrentMode.md","ref":"Protocol/userPro/getDPICurrentMode.md","articles":[]},{"title":"5.2.5.设置按键宏 [0x09]","level":"1.5.2.5","depth":3,"path":"Protocol/userPro/setKeyMacro.md","ref":"Protocol/userPro/setKeyMacro.md","articles":[]},{"title":"5.2.6.获取按键宏 [0x0A]","level":"1.5.2.6","depth":3,"path":"Protocol/userPro/getKeyMacro.md","ref":"Protocol/userPro/getKeyMacro.md","articles":[]},{"title":"5.2.7.设置当前灯效 [0x0B]","level":"1.5.2.7","depth":3,"path":"Protocol/userPro/setCurrentRGBMode.md","ref":"Protocol/userPro/setCurrentRGBMode.md","articles":[]},{"title":"5.2.8.获取当前灯效 [0x0C]","level":"1.5.2.8","depth":3,"path":"Protocol/userPro/getCurrentRGBMode.md","ref":"Protocol/userPro/getCurrentRGBMode.md","articles":[]},{"title":"5.2.9.获取当前电量 [0x0D]","level":"1.5.2.9","depth":3,"path":"Protocol/userPro/getCurrentPower.md","ref":"Protocol/userPro/getCurrentPower.md","articles":[]},{"title":"5.2.10.设置 Device 进入 BootLoader 模式 [0x11]","level":"1.5.2.10","depth":3,"path":"Protocol/userPro/setEnterBootLoader.md","ref":"Protocol/userPro/setEnterBootLoader.md","articles":[]},{"title":"5.2.11.通知 BootLoader 设备更新 FW 版本 [0x50]","level":"1.5.2.11","depth":3,"path":"Protocol/userPro/notifyUpdataFW.md","ref":"Protocol/userPro/notifyUpdataFW.md","articles":[]},{"title":"5.2.12.向 BootLoader 设备发送 FW 文档的数据 [0x51]","level":"1.5.2.12","depth":3,"path":"Protocol/userPro/postUpdataFWData.md","ref":"Protocol/userPro/postUpdataFWData.md","articles":[]},{"title":"5.2.13.设置 Device 退出 BootLoader 模式 [0x52]","level":"1.5.2.13","depth":3,"path":"Protocol/userPro/setExitBootLoader.md","ref":"Protocol/userPro/setExitBootLoader.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Protocol/userPro/setDriverMode.md","mtime":"2019-03-07T03:31:05.534Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-07T03:38:50.002Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
