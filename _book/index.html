@@ -560,7 +560,54 @@
                                 
                                 <p><img src="images/wpiLogo.jpg" alt="wpiLogo"></p>
 <h1 id="1&#x6587;&#x6863;&#x7EF4;&#x62A4;&#x8BF4;&#x660E;">1.&#x6587;&#x6863;&#x7EF4;&#x62A4;&#x8BF4;&#x660E;</h1>
+<h2 id="&#x57FA;&#x672C;&#x6D41;&#x7A0B;">&#x57FA;&#x672C;&#x6D41;&#x7A0B;</h2>
+<pre><code>## &#x514B;&#x9686;&#x4ED3;&#x5E93;
+git clone git@github.com:isDerek/gitbook_wgm.git
 
+# &#x82E5;&#x63D0;&#x9192;&#x4F60;&#x5E76;&#x6CA1;&#x6709;&#x7ED1;&#x5B9A;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x516C;&#x94A5;&#x5DF2;&#x63D0;&#x4EA4;&#x7ED9;&#x4ED3;&#x5E93;&#x7BA1;&#x7406;&#x5458;&#xFF09;&#xFF0C;&#x8BF7;&#x6267;&#x884C;&#x63D0;&#x793A;&#x547D;&#x4EE4;&#xFF1A;
+git remote add origin git@github.com:isDerek/gitbook_wgm.git
+</code></pre><pre><code>## &#x514B;&#x9686;&#x672C;&#x5730;&#x540E;&#xFF0C;&#x4FEE;&#x6539;&#x91CD;&#x65B0;&#x63D0;&#x4EA4;&#x5230;&#x4ED3;&#x5E93;&#x5373;&#x53EF;&#xFF08;&#x5DF2;&#x5B8C;&#x6210;&#x7ED1;&#x5B9A;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x6B65;&#x9AA4;&#xFF09;
+
+git status // &#x67E5;&#x770B;&#x4ED3;&#x5E93;&#x6587;&#x4EF6;&#x6240;&#x505A;&#x4FEE;&#x6539;
+git add .  // &#x6DFB;&#x52A0;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;&#x7684;&#x4E34;&#x65F6;&#x4ED3;&#x5E93;
+git commit -m &quot;&#x4F60;&#x6240;&#x505A;&#x7684;&#x4FEE;&#x6539;&#x6CE8;&#x91CA;&quot;  // &#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;
+git push   // &#x63D0;&#x4EA4;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x5230;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;
+
+# git push &#x82E5;&#x544A;&#x8BC9;&#x4F60;&#x8FD8;&#x6CA1;&#x6709;&#x7ED1;&#x5B9A;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5206;&#x652F;&#xFF0C;&#x6B64;&#x65F6;&#x6572;&#x51FB;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;
+git push --set-upstream origin master
+</code></pre><p><strong>notes: <br></strong>
+<strong>&#x6CE8;&#x610F;&#x82E5;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528; git &#xFF0C;git &#x7684;&#x5B89;&#x88C5;&#x4E0D;&#x505A;&#x8BF4;&#x660E;&#xFF0C;&#x4E0D;&#x65AD;&#x4E0B;&#x4E00;&#x6B65;&#x5373;&#x53EF;&#xFF0C;&#x5B89;&#x88C5;&#x597D;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;</strong></p>
+<p>I. &#x521B;&#x5EFA;&#x672C;&#x5730; git &#x4E2A;&#x4EBA;&#x4FE1;&#x606F;</p>
+<pre><code>git config --global &#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;
+git config --global &#x4F60;&#x7684;&#x90AE;&#x7BB1;&#xFF08;&#x5DF2;&#x5728; github &#x5B98;&#x7F51;&#x6CE8;&#x518C;&#x4E86;&#x7684;&#x90AE;&#x7BB1;&#xFF0C;&#x8BF7;&#x53BB; github &#x5B98;&#x7F51;&#x7533;&#x8BF7;&#x4E2A;&#x4EBA;&#x8D26;&#x6237;&#xFF09;
+</code></pre><p>II. &#x751F;&#x6210;&#x79C1;&#x94A5;&#x548C;&#x516C;&#x94A5;&#xFF08;&#x7528;&#x4E8E;&#x7ED1;&#x5B9A;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF09;</p>
+<pre><code># &#x751F;&#x6210;&#x79C1;&#x94A5;&#x548C;&#x516C;&#x94A5;
+
+# &#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x751F;&#x6210;&#x8FC7;&#x79C1;&#x94A5;&#x548C;&#x516C;&#x94A5;&#xFF0C;&#x82E5;&#x5B58;&#x5728; id_dsa&#xFF08;&#x79C1;&#x94A5;&#xFF09;&#x548C; id_dsa.pub&#xFF08;&#x516C;&#x94A5;&#xFF09;,&#x5219;&#x5FFD;&#x7565;&#x751F;&#x6210;&#x516C;&#x79C1;&#x94A5;&#x6B65;&#x9AA4;
+
+cd ~/.ssh // Linux \ Mac &#x7CFB;&#x7EDF;&#x73AF;&#x5883;&#x4E0B; git &#x516C;&#x79C1;&#x94A5;&#x5B58;&#x653E;&#x8DEF;&#x5F84;
+
+# Windows &#x5219;&#x5305;&#x542B;&#x5728; C:/User/&#x81EA;&#x5DF1;&#x7684;&#x7528;&#x6237;&#x540D;/.ssh &#x4E2D;
+
+# 1. &#x82E5;&#x516C;&#x79C1;&#x94A5;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;,&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x65AD;&#x56DE;&#x8F66;&#x5373;&#x53EF;
+
+ssh-keygen -t rsa -C &quot;&#x4F60;&#x7684;&#x90AE;&#x7BB1;&#x5730;&#x5740;&quot;
+
+# 2. &#x5C06;&#x516C;&#x94A5;&#x544A;&#x8BC9; github &#x4ED3;&#x5E93;&#x7684;&#x7BA1;&#x7406;&#x8005;&#xFF0C;&#x8BF7;&#x4ED6;&#x5C06;&#x4F60;&#x7684;&#x516C;&#x94A5;&#x6DFB;&#x52A0;&#x8FDB;&#x4ED3;&#x5E93;&#xFF0C;&#x81F3;&#x6B64;&#x5B8C;&#x6210;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;
+</code></pre><h2 id="&#x6587;&#x6863;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;">&#x6587;&#x6863;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;</h2>
+<pre><code>|&#x2014;&#x2014; README.md               # &#x6587;&#x6863;&#x8BF4;&#x660E;
+|&#x2014;&#x2014; SUMMARY.md              # &#x76EE;&#x5F55;
+|&#x2014;&#x2014; _book                   # gitbook &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+|&#x2014;&#x2014; ProjectIntro.md         # &#x9879;&#x76EE;&#x6982;&#x8FF0;
+|&#x2014;&#x2014; ProtocolIntroduce.md    # &#x534F;&#x8BAE;&#x6982;&#x8FF0;
+|&#x2014;&#x2014; MeetingMinutes.md       # &#x65E0;&#x7EBF;&#x7535;&#x7ADE;&#x9F20;&#x6807;&#x4F1A;&#x8BAE;&#x8BB0;&#x5F55;
+|&#x2014;&#x2014; device.md               # &#x8BBE;&#x5907;&#x7AEF;&#x6982;&#x8FF0;
+|&#x2014;&#x2014; book.pdf                # gitbook &#x6784;&#x5EFA;&#x7684; PDF &#x6587;&#x4EF6;
+|&#x2014;&#x2014; images                  # &#x653E;&#x7F6E;&#x6587;&#x6863;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x56FE;&#x7247;
+|&#x2014;&#x2014; device                  # &#x8BBE;&#x5907;&#x5C42;&#x6587;&#x6863;&#x76EE;&#x5F55;
+|&#x2014;&#x2014; Protocol                # &#x534F;&#x8BAE;&#x5C42;&#x6587;&#x6863;&#x76EE;&#x5F55;
+|&#x2014;&#x2014; graph                   # &#x653E;&#x7F6E;&#x5404;&#x79CD;&#x6D41;&#x7A0B;&#x56FE;
+</code></pre>
                                 
                                 </section>
                             
@@ -599,7 +646,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.文档维护说明","level":"1.1","depth":1,"next":{"title":"2.项目概述","level":"1.2","depth":1,"path":"ProjectIntro.md","ref":"ProjectIntro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-01-24T01:38:10.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-07T05:55:14.315Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.文档维护说明","level":"1.1","depth":1,"next":{"title":"2.项目概述","level":"1.2","depth":1,"path":"ProjectIntro.md","ref":"ProjectIntro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-03-08T02:42:22.809Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-08T01:01:08.891Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -607,6 +654,10 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
